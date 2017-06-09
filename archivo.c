@@ -8,22 +8,28 @@
 //	return BMI;
 #include <stdio.h>
 
-int *BuscaNumero(int *valores, int elemento, int tamaño);
+int *BuscaNumero(int *valores, int elemento, int tamanio);
 
 int main(){
-	BuscaNumero
+	int a[] = {1,2,3,4,5,6};
+	int elemento = 3;
+	int tamanio = 6;
+	int *puntero;
+	
+	puntero = BuscaNumero(a,elemento,tamanio);
+	printf("Dirección del elemento: %x\n", puntero);
 }
 
 
 
-int *BuscaNumero(int *valores, int elemento, int tamaño){
+int *BuscaNumero(int *valores, int elemento, int tamanio){
 	
-	for(int i=0;i<tamaño;i++){
-
-		if (*(valores+i)==elemento)
+	for(int i=0;i<tamanio;i++){
+		if (*(valores+i)==elemento){
 			return(&valores[i]);
-		else
-			break;
+		}
 	}
+
+	return 0;
 }
 
