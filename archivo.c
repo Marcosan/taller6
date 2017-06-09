@@ -6,24 +6,24 @@
 //	numeroA=&numeroB;
 //	numeroB=numeroC;
 //	return BMI;
-
-
+#include <stdio.h>
 
 int *BuscaNumero(int *valores, int elemento, int tamaño);
+
+int main(){
+	BuscaNumero
+}
+
+
+
 int *BuscaNumero(int *valores, int elemento, int tamaño){
 	
-        for(int i=0;i<tamaño;i++)
-	    {
+	for(int i=0;i<tamaño;i++){
 
-	     if (*(valores+i)==elemento)
-		return(&valores[i]);
-	     else
-		break;
-	    }
-
-
-
-
-
+		if (*(valores+i)==elemento)
+			return(&valores[i]);
+		else
+			break;
+	}
 }
 
